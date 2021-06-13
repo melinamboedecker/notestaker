@@ -5,15 +5,11 @@ const path = require('path');
 const uniqid = require('uniqid');
 
 const dbdatapath  = path.join(__dirname, '../public/db/db.json');
-console.log('CONST++++++++++++CONST')
-console.log(dbdatapath);
+
 
 module.exports = (app) => {
     // => API GET requests
     app.get('/api/notes', (req, res) => {
-        console.log(__dirname);
-        console.log('++++++++++++++++s')
-        console.log(dbdatapath);
         fs.readFile(dbdatapath, "utf8", (err,data) => {
             if (err) {
                 throw err;

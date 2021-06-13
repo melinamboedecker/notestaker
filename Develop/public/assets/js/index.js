@@ -54,6 +54,7 @@ const renderActiveNote = () => {
   hide(saveNoteBtn);
 
   if (activeNote.id) {
+    //commented out the setAttribute to read only so that new notes can be added
     // noteTitle.setAttribute('readonly', true);
     // noteText.setAttribute('readonly', true);
     noteTitle.value = activeNote.title;

@@ -2,10 +2,6 @@ const path = require('path');
 
 module.exports = (app) => {
     // => HTML GET requests
-    // app.get('/public/assets/js/index.js', (req, res) => {
-    //     res.sendFile(path.join(__dirname + '/index.js'));
-    // });
-
     app.get('/', (req, res) => {
         res.sendFile(path.join(__dirname, '../public/index.html'));
     });
