@@ -7,7 +7,7 @@ const uniqid = require('uniqid');
 module.exports = (app) => {
     // => API GET requests
     app.get('/api/notes', (req, res) => {
-        fs.readFile("./Develop/db/db.json/", "utf8", (err,data) => {
+        fs.readFile("./Develop/db/db.json/", (err,data) => {
             if (err) {
                 throw err;
             }
