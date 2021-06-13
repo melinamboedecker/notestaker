@@ -9,7 +9,7 @@ module.exports = (app) => {
     app.get('/api/notes', (req, res) => {
         console.log(__dirname);
         console.log('++++++++++++++++s')
-        fs.readFile("../Develop/public/db/db.json/", "utf8", (err,data) => {
+        fs.readFile("./Develop/public/db/db.json", "utf8", (err,data) => {
             if (err) {
                 throw err;
             }
